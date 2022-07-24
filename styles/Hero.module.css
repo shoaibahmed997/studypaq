@@ -1,0 +1,62 @@
+
+
+.container{
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+    height: 90vh;
+    background-color: beige;
+    color: white;
+}
+
+.background{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.502);
+    /* backdrop-filter: blur(1px) ; */
+}
+
+.content{
+    z-index: 1000;
+    position: relative;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.container h1{
+    color:white
+}
+
+.container button{
+    margin-top: 10px;
+}
+
+
+.rocket{
+    /* transform: translate(120px, -120px); */
+    transition: 1s all;
+    animation: launch 700ms ease-in-out 1 forwards
+}
+
+@keyframes launch {
+    to {transform: translate(120px,-120px);}
+}
+
+@keyframes rocketerr {
+    0% {transform: translate(100px,-140px);}
+    50% {transform: translate(140px,-100px);}
+    100% {transform: translate(100px,-140px);}
+}
+
+.assignment{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction:column ;
+    justify-content: center;
+    align-items: center;
+}
