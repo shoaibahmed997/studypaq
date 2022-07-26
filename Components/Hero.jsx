@@ -9,7 +9,6 @@ import {AiOutlineDown} from 'react-icons/ai'
 const HeroSection = ()=>{
     const [learn,setlearn] = useState(10)
     const [normal,setnormal] = useState(true)
-    console.log(learn)
     const StudyPaq = ()=>{
         setnormal(false)
         if(learn<100){

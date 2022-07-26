@@ -1,12 +1,14 @@
 import Image from "next/image"
 import { useState } from "react"
-import { Button, Card } from "react-bootstrap"
+import { Button, Card, Toast } from "react-bootstrap"
 import {AiFillLike} from 'react-icons/ai'
+import ShareComponent from "./Share"
 
 const ImageBox=({item})=>{
     const [count,setcount] = useState(0)
-    const shareit = ()=>{
-      
+    const [showShare,setShowShare] = useState(false)
+    const shareit = async ()=>{
+       setShowShare(!showShare)
     }
     const Likeit = ()=>{
         setcount(count+=1)
@@ -20,6 +22,14 @@ const ImageBox=({item})=>{
           <Button onClick={Likeit} variant="success">Like</Button>
           <Button onClick={shareit} variant="primary" style={{marginLeft:10}}>Share</Button>
         </Card.Body>
+        <Toast show={showShare} onClose={()=>setShowShare(false)}>
+            <Toast.Header>
+              Share Image on 
+            </Toast.Header>
+            <Toast.Body>
+              <ShareComponent item={item} />
+            </Toast.Body>
+        </Toast>
       </Card>
         )
 }

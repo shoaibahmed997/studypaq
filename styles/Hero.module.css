@@ -43,7 +43,7 @@
 }
 
 @keyframes launch {
-    to {transform: translate(120px,-120px);}
+    to {transform: translate(90px,-100px);}
 }
 
 @keyframes rocketerr {
